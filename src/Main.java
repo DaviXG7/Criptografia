@@ -20,6 +20,11 @@ public class Main {
             builder.append((int) word.toCharArray()[i] * index + 10000000);
         }
 
+        //A quantidade de caracteres precisa ser divisível por 8
+        if (!(builder.toString().length()%8==0)) throw new UnsupportedOperationException("A chave que foi utiliada para criptografar é muito grande!");
+
+
+
         //Retorna a string porque o número pode ser muito grande
 
         return builder.toString();
